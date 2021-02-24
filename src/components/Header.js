@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from 'react'
 
 const Header = ({ titulo }) => {
@@ -6,6 +7,10 @@ const Header = ({ titulo }) => {
             <a href="#!" className="brand-logo center">{ titulo }</a>
         </nav>
     )
+}
+
+Header.propTypes = {
+    titulo: PropTypes.any
 }
 
 export default Header

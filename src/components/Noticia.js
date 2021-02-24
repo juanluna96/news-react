@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from 'react'
 
 const Noticia = ({ noticia }) => {
@@ -28,6 +29,18 @@ const Noticia = ({ noticia }) => {
             </div>
         </div>
     )
+}
+
+Noticia.propTypes = {
+    noticia: PropTypes.shape({
+        description: PropTypes.any,
+        source: PropTypes.shape({
+            name: PropTypes.any
+        }),
+        title: PropTypes.any,
+        url: PropTypes.any,
+        urlToImage: PropTypes.any
+    })
 }
 
 export default Noticia

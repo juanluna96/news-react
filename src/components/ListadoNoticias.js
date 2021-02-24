@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from 'react'
 import Noticia from './Noticia';
 
@@ -9,6 +10,12 @@ const ListadoNoticias = ({ noticias }) => {
             }) }
         </div>
     )
+}
+
+ListadoNoticias.propTypes = {
+    noticias: PropTypes.shape({
+        map: PropTypes.func
+    })
 }
 
 export default ListadoNoticias
